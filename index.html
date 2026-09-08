@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Blank Notes">
+    <meta name="application-name" content="Blank Notes">
+    <meta name="description" content="A private notes app where text stays invisible until you toggle visibility.">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23000000' width='192' height='192'/><text x='96' y='120' font-size='100' fill='%23ffffff' text-anchor='middle' font-family='system-ui' font-weight='bold'>●</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23000000' width='192' height='192'/><text x='96' y='120' font-size='100' fill='%23ffffff' text-anchor='middle' font-family='system-ui' font-weight='bold'>●</text></svg>">
+    <title>Blank Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1 class="app-title">Blank Notes</h1>
+            </div>
+            <div class="header-right">
+                <button id="toggleBtn" class="toggle-btn" aria-label="Toggle text visibility" aria-pressed="false" title="Hidden">
+                    <span class="toggle-icon">●</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Editor -->
+        <main class="editor-container">
+            <textarea
+                id="editor"
+                class="editor hidden-mode"
+                placeholder=""
+                spellcheck="false"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off">
+            </textarea>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <button id="newBtn" class="footer-btn" aria-label="Create new note">
+                New Note
+            </button>
+            <button id="deleteBtn" class="footer-btn delete-btn" aria-label="Delete current note">
+                Delete
+            </button>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
